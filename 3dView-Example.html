@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+
+		<script src="https://preview.babylonjs.com/babylon.js"></script>
+		<script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+		<script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+		
+		<style>
+		html, body {
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+		}
+		#canvas {
+			width: 100%;
+			height: 100%;
+		}
+		</style>
+	</head>
+
+	<body>
+		<canvas id = "canvas" touch-action="none"></canvas>
+
+		<script>
+		
+			//HTML CANVAS AND RENDER ENGINE
+			var canvas = document.getElementById("canvas");
+			var engine = new BABYLON.Engine(canvas,true);
+		
+			var createScene = function () {
+
+				// Create the scene space
+				var scene = new BABYLON.Scene(engine);
+
+				// Add a camera to the scene and attach it to the canvas
+				var camera = new BABYLON.ArcRotateCamera("Camera", 3 * Math.PI / 4, Math.PI / 4, 4, BABYLON.Vector3.Zero(), scene);
+				camera.attachControl(canvas, true);
+
+				// Add lights to the scene
+				var light1 = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(1, 1, 0), scene);
+				var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
+
+				// Add and manipulate meshes in the scene
+				var box = BABYLON.MeshBuilder.CreateBox("box", {height: 1, width: 0.75, depth: 0.25}, scene);
+
+				return scene;
+
+			};
+			
+			var scene = createScene();
+			
+			//ENABLE FRAME REFRESH
+			engine.runRenderLoop(function () {
+				
+				scene.render();
+				
+			});
+			
+			//RESIZE CANVAS TO FIT WINDOW SIZE
+			window.addEventListener("resize", function() {
+				engine.resize()
+			});
+		</script>
+	</body>
+
+</html>
