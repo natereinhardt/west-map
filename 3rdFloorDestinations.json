@@ -1,0 +1,407 @@
+{"Destinations":
+	[ 
+	{
+		"x": 23,
+		"y": 28,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"data" :
+		{
+			"number": 336,
+			"teacher": "yolo"
+		}
+	},
+	{
+		"x": 65,
+		"y": 28,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": false,
+		"type": "restroom"
+	},
+	{
+		"x": 109,
+		"y": 28,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"data" :
+		{
+			"number": 326,
+			"teacher": "yolo"
+		}
+	},
+	{
+		"x": 151,
+		"y": 28,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "office",
+		"data":
+		{
+			"name": "Assistant Principal's Office",
+		}
+	},
+	{
+		"x": 189,
+		"y": 28,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 322,
+				"teacher": "yolo"
+			}
+	},
+	{
+		"x": 239,
+		"y": 28,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 320,
+				"teacher": "yolo"
+			}
+	},
+	{
+		"x": 282,
+		"y": 28,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": false,
+		"type": "stairs"
+	},
+	{
+		"x": 331,
+		"y": 28,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 314,
+				"teacher": "yolo"
+			}
+	},
+	{
+		"x": 387,
+		"y": 28,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 312,
+				"teacher": "yolo"
+			}
+	},
+	{
+		"x": 432,
+		"y": 28,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 310,
+				"teacher": "yolo"
+			}
+	},
+	{
+		"x": 482,
+		"y": 28,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 308,
+				"teacher": "yolo"
+			}
+	},
+	{
+		"x": 532,
+		"y": 28,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 306,
+				"teacher": "yolo"
+			}
+	},
+	{
+		"x": 579,
+		"y": 28,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 204,
+				"teacher": "yolo"
+			}
+	},
+	{
+		"x": 630,
+		"y": 28,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 302,
+				"teacher": "yolo"
+			}
+	},
+	{
+		"x": 21,
+		"y": 107,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 338,
+				"teacher": "yolo"
+			}
+	},
+	{
+	"x": 21,
+	"y": 171,
+	"left": true,
+	"right": true,
+	"up": true,
+	"down": true,
+	"type": "room",
+	"roomData" :
+		{
+			"number": ,
+			"teacher": "yolo"
+		}
+	},
+	{		
+		"x": 20,
+		"y": 225,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 342,
+				"teacher": "yolo"
+			}
+	},
+	{		
+		"x": 99,
+		"y": 100,
+		"left": true,
+		"right": true,
+		"up": false,
+		"down": true,
+		"type": "stairs"
+	},
+	{		
+		"x": 93,
+		"y": 142,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 331,
+				"teacher": "yolo"
+			}
+	},
+	{		
+		"x": 93,
+		"y": 182,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 333,
+				"teacher": "yolo"
+			}
+	},
+	{		
+		"x": 93,
+		"y": 217,
+		"left": false,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "stairs"
+	},
+	{		
+		"x": 142,
+		"y": 116,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 323,
+				"teacher": "yolo"
+			}
+	},
+	{		
+		"x": 196,
+		"y": 116,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 321,
+				"teacher": "yolo"
+			}
+	},
+	{		
+		"x": 253,
+		"y": 116,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 319,
+				"teacher": "yolo"
+			}
+	},
+	{		
+		"x": 313,
+		"y": 116,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 317,
+				"teacher": "yolo"
+			}
+	},
+	{		
+		"x": 376,
+		"y": 116,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 313,
+				"teacher": "yolo"
+			}
+	},
+	{		
+		"x": 437,
+		"y": 116,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 311,
+				"teacher": "yolo"
+			}
+	},
+	{		
+		"x": 493,
+		"y": 116,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 309,
+				"teacher": "yolo"
+			}
+	},
+	{		
+		"x": 554,
+		"y": 116,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "room",
+		"roomData" :
+			{
+				"number": 307,
+				"teacher": "yolo"
+			}
+	},
+	{		
+		"x": 604,
+		"y": 116,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "restroom"
+	},
+	{		
+		"x": 641,
+		"y": 116,
+		"left": true,
+		"right": true,
+		"up": true,
+		"down": true,
+		"type": "stairs"
+	}
+	]
+}
