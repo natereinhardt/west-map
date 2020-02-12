@@ -18,5 +18,6 @@ const cellType = { // used to determine what type a cell is, for example: whethe
     OPEN: 4,
     CLOSED: 5,
     FINISH: 6,
-    PATH: 7
+    PATH: 7,
+    TARGET: 8
 }

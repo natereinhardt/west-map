@@ -24,3 +24,18 @@ c.onclick = function() { // triggers each time the mouse is clicked
         firstClick = new Point(mouseX + scrollX, mouseY+scrollY); //set the x and y positions that the user clicked on
     }
 }
+
+document.addEventListener("keypress", function(event) {
+    if (event.key == "z") {
+        myGrid.lines.length -= 1;
+        let tempLines = myGrid.lines;
+        myGrid = new Grid(myGrid.width, myGrid.height, myGrid.cellWidth, myGrid.cellHeight);
+        for(let j = 0; j < tempLines.length; j++) {
+            let intersections = getIntersections(tempLines[j], myGrid); // get the intersections caused by the line
+            for(let i = 0; i < intersections.length; i++) { // store the intersctions in the grid
+                myGrid.cells[intersections[i].x][intersections[i].y] = 0;
+            }
+        }
+        myGrid.lines = tempLines;
+    }
+})
