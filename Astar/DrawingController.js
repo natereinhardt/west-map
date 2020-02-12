@@ -13,12 +13,12 @@ ctx.beginPath();
 
 let myGrid = new Grid(150, 150);
 
-text = "[[0, 0, 0, 1], [1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 0, 0]]";
+//text = "[[0, 0, 0, 1], [1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 0, 0]]";
 let cells = getCellArrayFromText(text);
 myGrid.cells = cells; // lazy way of instantiating the array size
 myGrid.initializeFromNumbers(cells);
 myGrid.setDimensions();
-m
+
 //myGrid.initializeRando(.8); random initilization testCode
 drawGrid(myGrid);
 setInterval(function(){ drawGrid(myGrid); if(endPassed==true){for(let i = 0; i < 100; i++) {aStarIterate(myGrid)}} }, 30);
@@ -56,7 +56,7 @@ function drawGrid(gridIn) { // draws the entire grid to the screen
                     break;
             }
             ctx.rect(col*cellWidth, row*cellHeight, cellWidth, cellHeight); // draws the rectangle at the according position within the grid
-            ctx.stroke();
+            //ctx.stroke();
             ctx.fill();
         }
     }
