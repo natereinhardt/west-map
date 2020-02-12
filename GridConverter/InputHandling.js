@@ -16,7 +16,7 @@ c.onclick = function() { // triggers each time the mouse is clicked
         myGrid.addLine(new Line(firstClick.x, firstClick.y, secondClick.x, secondClick.y)); // create and store the line the user created with both clicks
         let intersections = getIntersections(myGrid.lines[myGrid.lines.length-1], myGrid); // get the intersections caused by the line
         for(let i = 0; i < intersections.length; i++) { // store the intersctions in the grid
-            myGrid.cells[intersections[i].x][intersections[i].y] = 1;
+            myGrid.cells[intersections[i].x][intersections[i].y] = 0;
         }
     }
     else {

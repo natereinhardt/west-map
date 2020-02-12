@@ -6,8 +6,8 @@ function getIntersections(line, grid) { // gets each cell that a line passes thr
     let p = new Point(line.x1, line.y1);
     let r = new Point(line.x2-line.x1, line.y2-line.y1);
     let intersectedCells = [];
-    for(let row = 0; row < grid.height; row++) { // the code in this loop produces a list of intersected cells. baggage level high because big algorithm
-        for(let col = 0; col < grid.width; col++) {
+    for(let row = Math.floor(Math.min(line.y1/grid.cellHeight, line.y2/grid.cellHeight)); row < Math.ceil(Math.max(line.y1/grid.cellHeight, line.y2/grid.cellHeight)); row++) { // the code in this loop produces a list of intersected cells. baggage level high because big algorithm
+        for(let col = Math.floor(Math.min(line.x1/grid.cellWidth, line.x2/grid.cellWidth)); col < Math.ceil(Math.max(line.x1/grid.cellWidth, line.x2/grid.cellWidth)); col++) {
             let line1 = new Line(grid.cellWidth*col, grid.cellHeight*row, grid.cellWidth*col+grid.cellWidth, grid.cellHeight*row);// Top edge of cell
             //console.log("line1: " + "(" + line1.x1 + ", " + line1.y1 + "), (" + line1.x2 + ", " + line1.y2 + ")");
             let q = new Point(line1.x1, line1.y1);

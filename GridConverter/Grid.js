@@ -15,7 +15,7 @@ class Grid {
         for(let i = 0; i < width; i++) { // this for loop populates the grid with 0's denoting empty cells (1's denote blocked cells)
             this.cells[i] = [];
             for(let j = 0; j < height; j++) {
-                this.cells[i][j] = 0;
+                this.cells[i][j] = 1;
             }
         }
     }

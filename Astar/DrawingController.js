@@ -13,13 +13,13 @@ ctx.beginPath();
 
 let myGrid = new Grid(150, 150);
 
-text = "[[0, 0, 1], [1, 1, 1], [0, 1, 0]]";
+text = "[[0, 0, 0, 1], [1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 0, 0]]";
 let cells = getCellArrayFromText(text);
 myGrid.cells = cells; // lazy way of instantiating the array size
 myGrid.initializeFromNumbers(cells);
 myGrid.setDimensions();
-
-//myGrid.initializeRandom(.8); random initilization testCode
+m
+//myGrid.initializeRando(.8); random initilization testCode
 drawGrid(myGrid);
 setInterval(function(){ drawGrid(myGrid); if(endPassed==true){for(let i = 0; i < 100; i++) {aStarIterate(myGrid)}} }, 30);
 
