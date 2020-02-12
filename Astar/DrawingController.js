@@ -13,10 +13,11 @@ ctx.beginPath();
 
 let myGrid = new Grid(150, 150);
 
-let filePath = "newFloorMap.txt";
-let text = readTextFile(filePath);
+text = "[[0, 0, 1], [1, 1, 1], [0, 1, 0]]";
 let cells = getCellArrayFromText(text);
-myGrid.cells = cells;
+myGrid.cells = cells; // lazy way of instantiating the array size
+myGrid.initializeFromNumbers(cells);
+myGrid.setDimensions();
 
 //myGrid.initializeRandom(.8); random initilization testCode
 drawGrid(myGrid);

@@ -18,19 +18,22 @@ function readTextFile(file)
     rawFile.send(null);
 }
 
-function getCellArrayFromText(text) {
+function getCellArrayFromText(text) { // converts the cell array as formatted by ronan into a cell array in this code
     let cells = [];
-    text = replaceAt(text, 0, "");
-    while(text.search("[") != -1) {
-        let firstIndex = text.search("[");
-        let secondIndex = text.search("]");
-        let horizontalLine = text.substr(firstIndex, secondIndex-1);
+    text = text.substr(1);
+    text = text.replace(/\s/g, ''); // remove spaces
+    while(text.search('\\[') != -1) {
+        let firstIndex = text.search('\\[');
+        let secondIndex = text.search('\\]');
+        let horizontalLine = text.substr(firstIndex+1, secondIndex-1);
         cells[cells.length] = [];
         let values = horizontalLine.split(",");
         for(let i = 0; i < values.length; i++) {
-            cells[cells.length-1][i] = values[i]+1;
+            cells[cells.length-1][i] = (Number(values[i])+1);
         }
+        text = text.substr(secondIndex+2);
     }
+    return cells;
 }
 
 function replaceAt(text, index, replacement) {

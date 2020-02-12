@@ -1,5 +1,9 @@
 //This is the abstraction for the grid of cells
 class Grid {
+    setDimensions() {
+        this.width = cells.length;
+        this.height = cells[0].length;
+    }
     addOpenCell(row, col) { // adds an open cell to the list of open cells in the grid
         this.openCells[this.openCells.length] = this.cells[row][col];
     }
@@ -34,6 +38,13 @@ class Grid {
         else if(this.cells[cellY][cellX].type == cellType.EMPTY) {
             this.cells[cellY][cellX].type = cellType.BLOCKED; 
         } 
+    }
+    initializeFromNumbers(numbers) {
+        for(let row = 0; row < numbers.length; row++) {
+            for(let col = 0; col < numbers[0].length; col++) {
+                this.cells[row][col] = new Cell(row, col, numbers[row][col]);
+            }
+        }
     }
     initializeRandom(weight) { // sets all of the cells, randomly, to either empty or blocked, with an optional weight from 0 to 1, where 1 is all empty and 0 is all blocked
         for(let row = 0; row < this.height; row++) {
