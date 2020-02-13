@@ -32,6 +32,9 @@ function drawGrid(gridIn) { // draws the entire grid to the screen
                 case 1:
                     ctx.fillStyle = "#000000"; // black
                     break;
+                default:
+                    ctx.fillStyle = "#003333"; // turqoise
+                    break;
             }
             ctx.rect(col*cellWidth, row*cellHeight, cellWidth, cellHeight); // draws the rectangle at the according position within the grid
             ctx.stroke(); // draws border

@@ -3,13 +3,16 @@
 var firstClick; // point that the user first clicked at (mod 2)
 var secondClick; // second point the user clicks (mod 2)
 var waitingOnSecondClick = false; // determines which click the program is waiting on
+var globalMouseX;
+var globalMouseY;
+var offset = 7; // offset since mouseX and mouseY seem to be further right and down than they should be
 
 
 c.onclick = function() { // triggers each time the mouse is clicked
-    let mouseX = event.clientX; // the x position of the user's mouse, starting from the top left of their screen
-    let mouseY = event.clientY; // the y position
+    let mouseX = event.clientX-offset; // the x position of the user's mouse, starting from the top left of their screen
+    let mouseY = event.clientY-offset; // the y position
     let scrollX = window.scrollX; // how far to the right the user has scrolled, so the clicks map to the canvas accurately
-    let scrollY = window.scrollY; // how for down the user has scrolled
+    let scrollY = window.scrollY; // how far down the user has scrolled
     if(waitingOnSecondClick) {
         waitingOnSecondClick = false; // toggle which click is being watched
         secondClick = new Point(mouseX + scrollX, mouseY+scrollY); // set the x and y positions that the user clicked on
@@ -26,7 +29,7 @@ c.onclick = function() { // triggers each time the mouse is clicked
 }
 
 document.addEventListener("keypress", function(event) {
-    if (event.key == "z") {
+    if (event.key == "z") { // undo button
         myGrid.lines.length -= 1;
         let tempLines = myGrid.lines;
         myGrid = new Grid(myGrid.width, myGrid.height, myGrid.cellWidth, myGrid.cellHeight);
@@ -38,4 +41,19 @@ document.addEventListener("keypress", function(event) {
         }
         myGrid.lines = tempLines;
     }
+    if(event.key == "f") { // enter data for a cell
+        let mouseX = globalMouseX-offset; // the x position of the user's mouse, starting from the top left of their screen
+        console.log(mouseX);
+        let mouseY = globalMouseY-offset; // the y position
+        let scrollX = window.scrollX; // how far to the right the user has scrolled, so the clicks map to the canvas accurately
+        let scrollY = window.scrollY; // how far down the user has scrolled
+        let id = Number(prompt("Enter The Target ID (Preface with a 1)", "1[id]"));
+        myGrid.cells[Math.floor((mouseY+scrollY)/myGrid.cellHeight)][Math.floor((mouseX+scrollX)/myGrid.cellWidth)] = id;
+    }
 })
+
+document.addEventListener('mousemove', function(evt) {
+    globalMouseX = evt.clientX;
+    globalMouseY = evt.clientY;
+    //console.log(globalMouseX + ", " + globalMouseY);
+  }, false);

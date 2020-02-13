@@ -51,7 +51,10 @@ function drawGrid(gridIn) { // draws the entire grid to the screen
                     ctx.fillStyle = "#EE0044"; // red-purple
                     break;
                 case cellType.PATH:
-                    ctx.fillStyle = "#333333"; // turquoise
+                    ctx.fillStyle = "#333333"; // gray
+                    break;
+                case cellType.TARGET:
+                    ctx.fillStyle = "#003333"; // turquoise
                     break;
             }
             ctx.rect(col*cellWidth, row*cellHeight, cellWidth, cellHeight); // draws the rectangle at the according position within the grid
