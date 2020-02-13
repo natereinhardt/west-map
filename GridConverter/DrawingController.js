@@ -6,6 +6,9 @@ ctx.beginPath();
 
 
 let myGrid = new Grid(200, 200, Math.floor(c.width/200), Math.floor(c.height/200)); // instantiate grid with parameters
+let loadedData = getCellArrayFromText(text);
+myGrid.cells = loadedData;
+myGrid.setDimensions;
 
 setInterval(function(){
     drawGrid(myGrid); 
