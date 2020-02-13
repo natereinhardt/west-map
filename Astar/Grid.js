@@ -1,6 +1,6 @@
 //This is the abstraction for the grid of cells
 class Grid {
-    setDimensions() {
+    setDimensions() { // set the dimension values of the grid based on the dimensions of the cell array
         this.width = cells.length;
         this.height = cells[0].length;
     }
@@ -39,7 +39,7 @@ class Grid {
             this.cells[cellY][cellX].type = cellType.BLOCKED; 
         } 
     }
-    initializeFromNumbers(numbers) {
+    initializeFromNumbers(numbers) { // converts a 2d array of numbers into a 2d array of cell objects and initializes the cell array with them
         for(let row = 0; row < numbers.length; row++) {
             for(let col = 0; col < numbers[0].length; col++) {
                 this.cells[row][col] = new Cell(row, col, numbers[row][col]);

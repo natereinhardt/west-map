@@ -12,12 +12,12 @@ class Cell {
 }
 
 const cellType = { // used to determine what type a cell is, for example: whether you can move through a cell.
-    EMPTY: 1,
-    BLOCKED: 2,
-    START: 3,
-    OPEN: 4,
-    CLOSED: 5,
-    FINISH: 6,
-    PATH: 7,
-    TARGET: 8
+    EMPTY: 1, // Nothing is blocking the path
+    BLOCKED: 2, // Something is blocking the path
+    START: 3, // Start of pathfinding
+    OPEN: 4, // A cell has been opened for exploration
+    CLOSED: 5, // A cell has been closed after exploration
+    FINISH: 6, // The cell is the finish for pathfinding
+    PATH: 7, // The cell has been discovered as a path
+    TARGET: 8 // Special finish cell for a target with an id that must be matched (like in searching for rooms)
 }

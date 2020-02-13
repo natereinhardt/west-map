@@ -1,5 +1,6 @@
-//This file is used as part of the html mockup to draw the grid to the screen
+//This file is used as part of the html mockup to draw the grid to the screen as well as demo a few things
 var c = document.getElementById("myCanvas");
+
 c.width = innerWidth;
 c.height = innerHeight;
 if(c.width < c.height) {
@@ -8,18 +9,16 @@ if(c.width < c.height) {
 else {
     c.width = c.height;
 }
-var ctx = c.getContext("2d"); // temporary test code for reference
-ctx.beginPath();
+var ctx = c.getContext("2d"); // creates the 2d drawing handler for the canvas
 
 let myGrid = new Grid(150, 150);
 
-//text = "[[0, 0, 0, 1], [1, 0, 0, 0], [0, 1, 0, 1], [0, 0, 0, 0]]";
-let cells = getCellArrayFromText(text);
+let cells = getCellArrayFromText(text); // text is pulled directly from data file
 myGrid.cells = cells; // lazy way of instantiating the array size
-myGrid.initializeFromNumbers(cells);
-myGrid.setDimensions();
+myGrid.initializeFromNumbers(cells); // initalizes the array of cell objects based on a raw number array
+myGrid.setDimensions(); // sets the dimensions of the grid based on the dimensions of the newly generated cell array
 
-//myGrid.initializeRando(.8); random initilization testCode
+//myGrid.initializeRandom(.8); //random initilization testCode
 drawGrid(myGrid);
 setInterval(function(){ drawGrid(myGrid); if(endPassed==true){for(let i = 0; i < 100; i++) {aStarIterate(myGrid)}} }, 30);
 
