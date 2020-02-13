@@ -42,9 +42,9 @@ document.addEventListener("keypress", function(event) {
         myGrid.lines = tempLines;
     }
     if(event.key == "f") { // enter data for a cell
-        let mouseX = globalMouseX-offset; // the x position of the user's mouse, starting from the top left of their screen
+        let mouseX = globalMouseX; // the x position of the user's mouse, starting from the top left of their screen
         console.log(mouseX);
-        let mouseY = globalMouseY-offset; // the y position
+        let mouseY = globalMouseY; // the y position
         let scrollX = window.scrollX; // how far to the right the user has scrolled, so the clicks map to the canvas accurately
         let scrollY = window.scrollY; // how far down the user has scrolled
         let id = Number(prompt("Enter The Target ID (Preface with a 1)", "1[id]"));
@@ -53,7 +53,13 @@ document.addEventListener("keypress", function(event) {
 })
 
 document.addEventListener('mousemove', function(evt) {
-    globalMouseX = evt.clientX;
-    globalMouseY = evt.clientY;
+    globalMouseX = evt.clientX-offset; // offset adjusts for an offset of a few pixels whose cause I couldn't find
+    globalMouseY = evt.clientY-offset;
+    let scrollX = window.scrollX;
+    let scrollY = window.scrollY;
+    document.getElementById('textbox').innerHTML = "ID: " + myGrid.cells[Math.floor((globalMouseY+scrollY)/myGrid.cellHeight)][Math.floor((globalMouseX+scrollX)/myGrid.cellWidth)];
+    document.getElementById('textbox').style.position = "absolute";
+    document.getElementById('textbox').style.left = globalMouseX + scrollX + 30 + "px";
+    document.getElementById('textbox').style.top = globalMouseY + scrollY + 30 + "px";
     //console.log(globalMouseX + ", " + globalMouseY);
   }, false);

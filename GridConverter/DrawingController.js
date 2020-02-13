@@ -5,10 +5,10 @@ var ctx = c.getContext("2d");
 ctx.beginPath();
 
 
-let myGrid = new Grid(200, 200, Math.floor(c.width/200), Math.floor(c.height/200)); // instantiate grid with parameters
-let loadedData = getCellArrayFromText(text);
-myGrid.cells = loadedData;
-myGrid.setDimensions;
+let myGrid = new Grid(120, 120, Math.floor(c.width/120), Math.floor(c.height/120)); // instantiate grid with parameters
+//let loadedData = getCellArrayFromText(text);
+//myGrid.cells = loadedData;
+//myGrid.setDimensions;
 
 setInterval(function(){
     drawGrid(myGrid); 
@@ -55,5 +55,5 @@ function drawGrid(gridIn) { // draws the entire grid to the screen
 function drawFloor(img) { // draws the image for the user to view while tracing
     ctx.beginPath();
     globalAlpha = 0.5; // transparent for viewing the grid at the same time
-    ctx.drawImage(img, 10, 10); // draws image
+    ctx.drawImage(img, 0, 0); // draws image
 }
