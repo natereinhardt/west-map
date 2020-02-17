@@ -5,7 +5,7 @@ var ctx = c.getContext("2d");
 ctx.beginPath();
 
 
-let myGrid = new Grid(120, 120, Math.floor(c.width/120), Math.floor(c.height/120)); // instantiate grid with parameters
+let myGrid = new Grid(150, 150, Math.floor(c.width/130), Math.floor(c.height/130)); // instantiate grid with parameters
 //let loadedData = getCellArrayFromText(text);
 //myGrid.cells = loadedData;
 //myGrid.setDimensions;
@@ -16,8 +16,8 @@ setInterval(function(){
 }, 30); // draw every 30 ms
 
 function drawGrid(gridIn) { // draws the entire grid to the screen
-    cellWidth = Math.floor(c.width/gridIn.width); // determines how wide each cell must be to fill the screen
-    cellHeight = Math.floor(c.height/gridIn.height); // determines how tall each cell must be to fill the screen
+    cellWidth = gridIn.cellWidth; // determines how wide each cell must be to fill the screen
+    cellHeight = gridIn.cellHeight; // determines how tall each cell must be to fill the screen
     
     for(let row = 0; row < gridIn.height; row++) { // iterates through the rows of the grid
         for(let col = 0; col < gridIn.width; col++) { // iterates through the columns of the grid
