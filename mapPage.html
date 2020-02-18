@@ -4,25 +4,31 @@
 
 </head>
 <style>
-
-html,body {
-	background-image: url("floor_1.png");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-	background-size: 100%;	
-}
-
-</style>
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    </style>
 <body>
 
-<select name='floors'>
-	<option title='third' value='3'>Third</option>
-	<option title='second' value='2'>Second</option>
-	<option title='main' value='1' selected='selected'>Main</option>
-	<option title='base' value='0'>Basement</option>
-</select>
+<div>
 
+<select onchange="document.getElementById('preview').src = this.value">
+	<option title='third' value='floor3.png'>Third</option>
+	<option title='second' value='floor2.png'>Second</option>
+	<option title='main' value='floor1.png' selected='selected'>Main</option>
+	<option title='base' value='floor0.png'>Basement</option>
+</select>
+</div>
+
+<div class="imgbox">
+<img class="center-fit" id="preview">
+</div>
 
 </body>
 </html>
