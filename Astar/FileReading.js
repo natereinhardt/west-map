@@ -12,10 +12,10 @@ function getCellArrayFromText(text) { // converts the cell array as formatted by
         let values = horizontalLine.split(","); // splits the contents into a row of number values
         for(let i = 0; i < values.length; i++) { // iterate through the row of values
             if(values[i]<=1) { // empty or blocked
-                cells[cells.length-1][i] = (Number(values[i])+1); // initialize each column within the row to the corresponding value in the list
+                cells[cells.length-1][i] = new Cell(cells.length-1, i, (Number(values[i])+1)); // initialize each column within the row to the corresponding value in the list
             }
             else { // value greater than 1 indicates an id being used
-                cells[cells.length-1][i] = cellType.TARGET;
+                cells[cells.length-1][i] = new Cell(cells.length-1, i, cellType.TARGET);
                 cells[cells.length-1][i].id = Number(values[i].substr(1)); // substr knocks of the leading 1 which should be used to indicate an id
             }
         }

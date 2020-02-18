@@ -29,6 +29,15 @@ class Grid {
         this.cells[cellY][cellX].type = cellType.FINISH;
         this.endCell = this.cells[cellY][cellX];
     }
+    setEndBySearchID() {
+        for(let row = 0; row < this.height; row++) {
+            for(let col = 0; col < this.width; col++) {
+                if(this.searchID == this.cells[row][col].id) {
+                    this.endCell = this.cells[row][col];
+                }
+            }
+        }
+    }
     passChange(x, y, screenWidth, screenHeight) { // changes any blocks between blocked and empty status
         let cellX = Math.floor(x/cellWidth);
         let cellY = Math.floor(y/cellHeight);
@@ -38,13 +47,6 @@ class Grid {
         else if(this.cells[cellY][cellX].type == cellType.EMPTY) {
             this.cells[cellY][cellX].type = cellType.BLOCKED; 
         } 
-    }
-    initializeFromNumbers(numbers) { // converts a 2d array of numbers into a 2d array of cell objects and initializes the cell array with them
-        for(let row = 0; row < numbers.length; row++) {
-            for(let col = 0; col < numbers[0].length; col++) {
-                this.cells[row][col] = new Cell(row, col, numbers[row][col]);
-            }
-        }
     }
     initializeRandom(weight) { // sets all of the cells, randomly, to either empty or blocked, with an optional weight from 0 to 1, where 1 is all empty and 0 is all blocked
         for(let row = 0; row < this.height; row++) {

@@ -9,6 +9,7 @@ c.onclick = function() { // click event
     if(!startPassed) { // checks whether the first click has been made
         myGrid.passStart(mouseX + scrollX, mouseY + scrollY, c.width, c.height); // notifies the grid of the first click, to draw the start node
         startPassed = true; // sets flag
+        endPassed=true;
     }
     else if(!endPassed) { // checks whether the second click has been made
         myGrid.passEnd(mouseX + scrollX, mouseY + scrollY, c.width, c.height); // notifies the grid of the second click, to draw the end node

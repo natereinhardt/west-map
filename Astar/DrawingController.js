@@ -15,12 +15,18 @@ let myGrid = new Grid(150, 150);
 
 let cells = getCellArrayFromText(text); // text is pulled directly from data file
 myGrid.cells = cells; // lazy way of instantiating the array size
-myGrid.initializeFromNumbers(cells); // initalizes the array of cell objects based on a raw number array
+
 myGrid.setDimensions(); // sets the dimensions of the grid based on the dimensions of the newly generated cell array
+//
+//
+myGrid.searchID = Number(prompt("Enter your room destination, then click your location on the map.", "111"));
+//
+//
+myGrid.setEndBySearchID();
 
 //myGrid.initializeRandom(.8); //random initilization testCode
 drawGrid(myGrid);
-setInterval(function(){ drawGrid(myGrid); if(endPassed==true){for(let i = 0; i < 100; i++) {aStarIterate(myGrid)}} }, 30);
+setInterval(function(){ drawGrid(myGrid); if(startPassed==true){for(let i = 0; i < 100; i++) {aStarIterate(myGrid)}} }, 30);
 
 function drawGrid(gridIn) { // draws the entire grid to the screen
     cellWidth = Math.floor(c.width/gridIn.width); // determines how wide each cell must be to fill the screen

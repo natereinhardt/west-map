@@ -28,7 +28,7 @@ function openAroundOpenCell(gridIn, openCellIndex) { // explores the cells aroun
         let relativeCellCol = startCol + colVariation; // find the column of the next relative cell to be looked at
         let relativeCell = gridIn.cells[relativeCellRow][relativeCellCol]; // find the next relative cell to be looked at
         let relativeCellType = relativeCell.type; // find the type of the relative cell (for later convenience)
-        if(relativeCellType == cellType.FINISH) { // first checks if the cell is finishing, which would end the path
+        if(relativeCellType == cellType.FINISH || (relativeCellType == cellType.TARGET && relativeCell.id==gridIn.searchID)) { // first checks if the cell is finishing, which would end the path
             gridIn.solved = true; // mark the grid as solved, since a path has been discovered
             let recursingCell = gridIn.openCells[openCellIndex]; // begin recursing cell by cell to draw the path
             while(recursingCell.type!=cellType.START) { // continue recursing until the start cell
@@ -80,7 +80,7 @@ function openAroundStartCell(gridIn) { // custom code to open cells around the s
             relativeCell.fcost = fcost(relativeCell, gridIn.endCell, rowVariation, colVariation); //set the fcost of the new cell
             relativeCell.type = cellType.OPEN; // set the type of the newly opened cell to open
             gridIn.addOpenCell(relativeCellRow, relativeCellCol); // add the open cell to the grid's listing of open cells
-            relativeCell.debugInfo(); // debug code, probably want to remove in production or something professional like that
+            //relativeCell.debugInfo(); // debug code, probably want to remove in production or something professional like that
         }
     }
 }

@@ -8,6 +8,7 @@ class Cell {
         this.row = row;
         this.col = col;
         this.type = type;
+        this.id = 0;
     }
 }
 
