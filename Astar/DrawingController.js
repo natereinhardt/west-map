@@ -13,7 +13,7 @@ var ctx = c.getContext("2d"); // creates the 2d drawing handler for the canvas
 
 let myGrid = new Grid(150, 150);
 
-let cells = getCellArrayFromText(text); // text is pulled directly from data file
+let cells = getCellArrayFromText(floor3); // text is pulled directly from data file, choose floor
 myGrid.cells = cells; // lazy way of instantiating the array size
 
 myGrid.setDimensions(); // sets the dimensions of the grid based on the dimensions of the newly generated cell array
