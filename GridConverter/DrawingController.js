@@ -1,6 +1,6 @@
 var c = document.getElementById("myCanvas");
-c.width = document.getElementById("FirstFloor").width;
-c.height = document.getElementById("FirstFloor").height;
+document.getElementById("FirstFloor").width = c.width;
+document.getElementById("FirstFloor").height = c.height;
 var ctx = c.getContext("2d");
 ctx.beginPath();
 

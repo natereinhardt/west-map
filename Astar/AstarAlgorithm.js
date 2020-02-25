@@ -31,8 +31,10 @@ function openAroundOpenCell(gridIn, openCellIndex) { // explores the cells aroun
         if(relativeCellType == cellType.FINISH || (relativeCellType == cellType.TARGET && relativeCell.id==gridIn.searchID)) { // first checks if the cell is finishing, which would end the path
             gridIn.solved = true; // mark the grid as solved, since a path has been discovered
             let recursingCell = gridIn.openCells[openCellIndex]; // begin recursing cell by cell to draw the path
+            gridIn.addPathCell(relativeCell.row, relativeCell.col);
             while(recursingCell.type!=cellType.START) { // continue recursing until the start cell
                 recursingCell.type = cellType.PATH; // change cell to path cell
+                gridIn.addPathCell(recursingCell.row, recursingCell.col);
                 recursingCell = recursingCell.parent; // recurse to the cell's parent
             }
             return; // return since no more needs to be done if the path is finished

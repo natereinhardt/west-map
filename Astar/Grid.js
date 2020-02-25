@@ -7,6 +7,9 @@ class Grid {
     addOpenCell(row, col) { // adds an open cell to the list of open cells in the grid
         this.openCells[this.openCells.length] = this.cells[row][col];
     }
+    addPathCell(row, col) {
+        this.pathCells[this.pathCells.length] = this.cells[row][col];
+    }
     removeOpenCell(openCellIndex) { // removes open cells once they become closed
         for(let i = openCellIndex; i < this.openCells.length-1; i++) {
             this.openCells[i] = this.openCells[i+1];
@@ -14,17 +17,15 @@ class Grid {
         this.openCells.length -= 1;
     }
     passStart(x, y, screenWidth, screenHeight) { // places the starting square on the grid
-        cellWidth = Math.floor(screenWidth / this.width);
         let cellX = Math.floor(x/cellWidth);
-        cellHeight = Math.floor(screenHeight / this.height);
         let cellY = Math.floor(y/cellHeight);
         this.cells[cellY][cellX].type = cellType.START;
         this.startCell = this.cells[cellY][cellX];
     }
     passEnd(x, y, screenWidth, screenHeight) { // places the ending square on the grid
-        cellWidth = Math.floor(screenWidth / this.width);
+        cellWidth = screenWidth / this.width;
         let cellX = Math.floor(x/cellWidth);
-        cellHeight = Math.floor(screenHeight / this.height);
+        cellHeight = screenHeight / this.height;
         let cellY = Math.floor(y/cellHeight);
         this.cells[cellY][cellX].type = cellType.FINISH;
         this.endCell = this.cells[cellY][cellX];
@@ -66,6 +67,7 @@ class Grid {
         this.width = width;
         this.cells = [];
         this.openCells = [];
+        this.pathCells = [];
         this.solved = false;
     }
 }
