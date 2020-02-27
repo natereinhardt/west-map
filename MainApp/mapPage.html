@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<style>
+        .imgbox {
+            display: grid;
+            max-width:100%;
+            margin: 0;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 200vh;
+            margin: 0;
+        }
+        .nav {
+            max-width: 100%;
+            text-align: center;
+            background-color: black;
+            height: 50px;
+            
+        }
+    </style>
+<body>
+
+<div class="nav">
+
+    <button style="margin-right: 30%;background-image: url('search.png');">Search</button>
+
+    <select onchange="document.getElementById('preview').src = this.value">
+	    <option title='third' value='floor3.png'>Third</option>
+	    <option title='second' value='floor2.png'>Second</option>
+	    <option title='main' value='floor1.png' selected='selected'>Main</option>
+	    <option title='base' value='floor0.png'>Basement</option>
+    </select>
+
+    <button style="margin-left: 30%;">Search</button>
+</div>
+
+
+<div class="imgbox">
+    <!-- <img class="center-fit" id="preview" src="floor1.png"> -->
+    <canvas id="myCanvas"></canvas>
+    <img id="SecondFloor" src="floor2.png" style="display:none">
+
+        <script src="LineBuilder.js"></script>
+        <script src ="floor3Data.js"></script>
+        <script src ="floor2Data.js"></script>
+        <script src="FileReading.js"></script>
+        <script src="Vector.js"></script>
+        <script src="Relatives.js"></script>
+        <script src="Cell.js"></script>
+        <script src="Grid.js"></script>
+        <script src="Costs.js"></script>
+        <script src="AstarAlgorithm.js"></script>
+        <script src="DrawingController.js"></script>
+        <script src="InputHandling.js"></script>
+</div>
+
+
+</body>
+</html>
