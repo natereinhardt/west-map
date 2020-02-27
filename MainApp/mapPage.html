@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<style>
+        .imgbox {
+            display: grid;
+            height: 100%;
+            margin: 0;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 200vh;
+            margin: 0;
+        }
+    </style>
+<body>
+
+<div>
+
+<select onchange="document.getElementById('preview').src = this.value">
+	<option title='third' value='floor3.png'>Third</option>
+	<option title='second' value='floor2.png'>Second</option>
+	<option title='main' value='floor1.png' selected='selected'>Main</option>
+	<option title='base' value='floor0.png'>Basement</option>
+</select>
+</div>
+
+
+<div class="imgbox">
+    <!-- <img class="center-fit" id="preview" src="floor1.png"> -->
+    <canvas id="myCanvas"></canvas>
+    <img id="SecondFloor" src="floor2.png" style="display:none">
+
+        <script src="LineBuilder.js"></script>
+        <script src ="floor3Data.js"></script>
+        <script src ="floor2Data.js"></script>
+        <script src="FileReading.js"></script>
+        <script src="Vector.js"></script>
+        <script src="Relatives.js"></script>
+        <script src="Cell.js"></script>
+        <script src="Grid.js"></script>
+        <script src="Costs.js"></script>
+        <script src="AstarAlgorithm.js"></script>
+        <script src="DrawingController.js"></script>
+        <script src="InputHandling.js"></script>
+</div>
+
+
+</body>
+</html>

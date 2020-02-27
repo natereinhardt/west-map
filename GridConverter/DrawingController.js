@@ -1,20 +1,20 @@
 var c = document.getElementById("myCanvas");
-document.getElementById("FirstFloor").width = c.width;
-document.getElementById("FirstFloor").height = c.height;
+c.width = document.getElementById("FirstFloor").width;
+c.height = document.getElementById("FirstFloor").height;
 var ctx = c.getContext("2d");
 ctx.beginPath();
 
 
 let myGrid = new Grid(150, 150, Math.floor(c.width/130), Math.floor(c.height/130)); // instantiate grid with parameters
-//let loadedData = getCellArrayFromText(text);
-//myGrid.cells = loadedData;
-//myGrid.setDimensions;
+let loadedData = getCellArrayFromText(text);
+myGrid.cells = loadedData;
+myGrid.setDimensions();
 
 setInterval(function(){
     drawGrid(myGrid); 
     drawFloor(document.getElementById("FirstFloor")); 
 }, 30); // draw every 30 ms
-
+ 
 function drawGrid(gridIn) { // draws the entire grid to the screen
     cellWidth = gridIn.cellWidth; // determines how wide each cell must be to fill the screen
     cellHeight = gridIn.cellHeight; // determines how tall each cell must be to fill the screen
