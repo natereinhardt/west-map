@@ -63,9 +63,9 @@ function drawGrid(gridIn) { // draws the entire grid to the screen
                     ctx.fillStyle = "#003333"; // turquoise
                     break;
             }
-            //ctx.rect(col*cellWidth, row*cellHeight, cellWidth, cellHeight); // draws the rectangle at the according position within the grid
+            ctx.rect(col*cellWidth, row*cellHeight, cellWidth, cellHeight); // draws the rectangle at the according position within the grid
             //ctx.stroke();
-            //ctx.fill();
+            ctx.fill();
             ctx.closePath();
         }
     }
