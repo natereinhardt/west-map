@@ -1,8 +1,8 @@
 //This is the abstraction for the grid of cells
 class Grid {
     setDimensions() { // set the dimension values of the grid based on the dimensions of the cell array
-        this.width = cells.length;
-        this.height = cells[0].length;
+        this.width = cells[0].length;
+        this.height = cells.length;
     }
     addOpenCell(row, col) { // adds an open cell to the list of open cells in the grid
         this.openCells[this.openCells.length] = this.cells[row][col];

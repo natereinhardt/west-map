@@ -1,16 +1,81 @@
-<!DOCTYPE html>
 <html>
 <head>
-
+  <meta name="google-signin-client_id" content="200087147717-s631mincki9phknd5g3m5opf2c32k7oc.apps.googleusercontent.com">
+  <!--<meta name="google-signin-client_id" content="201872882905-n8h6a531cgjn27ivlabnnmistcqoc1eh.apps.googleusercontent.com">-->
+<!-- BEGIN Pre-requisites -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+</script>
+<script src="https://apis.google.com/js/client:platform.js?onload=start" async defer>
+</script>
+<!-- END Pre-requisites -->
+<script>
+    function start() {
+      gapi.load('auth2', function() {
+        <h1> HELLO </h1>
+        auth2 = gapi.auth2.init({
+         client_id: '200087147717-s631mincki9phknd5g3m5opf2c32k7oc.apps.googleusercontent.com',
+         //client_id: '201872882905-n8h6a531cgjn27ivlabnnmistcqoc1eh.apps.googleusercontent.com',
+          // Scopes to request in addition to 'profile' and 'email'
+          scope: 'https://www.googleapis.com/auth/cloud-platform'
+        });
+      });
+    }
+  </script>
 </head>
-<style>
-
-</style>
 <body>
-<p>Hello</p>
+  <div id="my-signin2"></div>
+  <script>
+    function onSuccess(googleUser) {
+      window.location.replace("./mapPage.html");
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+         
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+    function renderButton() {
+     gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+  </script>
 
-<a href="mapPage.html"><button>Continue</button></a>
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+  <script>
+    $('#my-signin2').click(function() {
+      // signInCallback defined in step 6.
+     auth2.grantOfflineAccess().then(signInCallback);
+    });
+  </script>
+  <script>
+    function signInCallback(authResult) {
+      if (authResult['code']) {
+         // Hide the sign-in button now that the user is authorized, for example:
+        $('#signinButton').attr('style', 'display: none');
+        // Send the code to the server
+        $.ajax({
+          type: 'POST',
+          url: 'http://localhost/storeauthcode',
+           headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+          },
+          contentType: 'application/octet-stream; charset=utf-8',
+          success: function(result) {
+            // Handle or verify the server response.
+          },
+          processData: false,
+          data: authResult['code']
+        });
+      } else {
 
-
+      }
+    }
+    </script>
 </body>
 </html>

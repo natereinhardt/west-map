@@ -5,10 +5,10 @@ var ctx = c.getContext("2d");
 ctx.beginPath();
 
 
-let myGrid = new Grid(100, 100, Math.floor(c.width/100), Math.floor(c.height/100)); // instantiate grid with parameters
-//let loadedData = getCellArrayFromText(text);
-//myGrid.cells = loadedData;
-//myGrid.setDimensions();
+let myGrid = new Grid(150, 150, Math.floor(c.width/130), Math.floor(c.height/130)); // instantiate grid with parameters
+// let loadedData = getCellArrayFromText(text);
+// myGrid.cells = loadedData;
+// myGrid.setDimensions();
 
 setInterval(function(){
     drawGrid(myGrid); 

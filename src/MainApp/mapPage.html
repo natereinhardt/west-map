@@ -1,41 +1,261 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <link href="numpad.css" rel="stylesheet">
 </head>
 <style>
-        .imgbox {
+        #imgbox {
             display: grid;
-            height: 100%;
-            margin: 0;
+            width: 100%;
+            text-align: center;
+            
         }
         .center-fit {
             max-width: 100%;
             max-height: 200vh;
             margin: 0;
         }
+        #main {
+	        width: 440px;
+	        height: 800px;
+	        border-color:black;
+	        border-style: solid;
+	        border-width: 1px;
+	        justify-content: center;
+            text-align: center;
+            overflow:hidden;
+        }
+        #myCanvas {
+            max-height: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            margin-top: 5%;
+            background-color: white;
+        }
+        #myCanvas:hover {
+            
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        /* Drop Down Style */
+
+        #toggle {
+            display: block;
+            width: 28px;
+            height: 30px;
+            margin: 30px auto 10px;
+            margin-right: 50px;
+            
+        }
+        #toggle:active {
+            -webkit-transform: translate(0,3px); /* depth of button press */
+        }
+        .dropItem {
+            max-width: 50px;
+            max-height: 50px;
+            position: relative;
+            margin-top: 20px;
+        }
+        .dropButton {
+            background-color: transparent;
+            border:none;
+            margin-left: 0px;
+            outline: none;
+        }
+        .dropButton:active {
+            transform: scale(1.1)
+        }
+        input[type='checkbox'] {
+            display: none;
+        }
+        .wrap-collabsible {
+  margin-bottom: 1.2rem 0;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.lbl-toggle {
+  display: block;
+
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 1rem;
+
+  color: #A77B0E;
+  background: #FAE042;
+
+  cursor: pointer;
+
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: #7C5A0B;
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 100vh;
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {
+  background: rgba(250, 224, 66, .2);
+  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  padding: .5rem 1rem;
+}
+
+
+
+/* on activation */
+#toggle.on img {
+  background-color: transparent;
+}
+#toggle.on img:before {
+  transform: rotate(45deg)
+}
+#toggle.on img:after {
+  transform: rotate(-45deg)
+}
+#toggle.on + #menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* menu appearance*/
+#menu {
+  position: absolute;
+  color: #999;
+  width: 60px;
+  padding: 10px;
+  margin: auto;
+  margin-top: 25px;
+  margin-left: -15px;
+  text-align: center;
+  border-radius: 10px;
+  background:rgba(245, 245, 245, 0.95);
+  
+  /* just for this demo */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s;
+}
+#menu:after {
+  position: absolute;
+  top: -15px;
+  left: 95px;
+  content: "";
+  display: block;
+}
+ul, li, li a {
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+li a {
+  padding: 5px;
+  color: #888;
+  text-decoration: none;
+  transition: all .2s;
+}
+li a:hover,
+li a:focus {
+  background: #1ABC9C;
+  color: #fff;
+}
+        
+        
     </style>
 <body>
+<div id="main">
+<div style="width: 100%;background-color:white;justify-content: center;">
+    <div class="container">
+        <div>
+            <img src="navHeader.png" style="max-height:100px;margin-top: 4%;margin-left: 7%;">
+        </div>
+        <div style="flex-direction: column;z-index: 40;">
+            <a href="#menu" id="toggle"><img src="search.png" style="max-width: 50px;max-height: 50px;"></a>
 
-<div>
+            <div id="menu">
+             <ul>
+                 <li><button class="dropButton"><img src="roomNum.png" class="dropItem" style="margin-top: 5px"></button></li>
+                 <label for="collapsible" class="lbl-toggle">More Info</label>
+                 <li><button class="dropButton"><img src="bathroom.png" class="dropItem" onclick="resetPath(343)"></button></li>
+                 <li><button class="dropButton"><img src="nurse.png" class="dropItem" onclick="resetPath(348)"></button></li>
+                 <li><button class="dropButton"><img src="vending.png" class="dropItem" onclick="resetPath(345)"></button></li>
+                 <li><button class="dropButton"><img src="clear.png" class="dropItem" onclick="resetPath()"></button></li>
+                 
+             </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
-<select onchange="document.getElementById('preview').src = this.value">
-	<option title='third' value='floor3.png'>Third</option>
-	<option title='second' value='floor2.png'>Second</option>
-	<option title='main' value='floor1.png' selected='selected'>Main</option>
-	<option title='base' value='floor0.png'>Basement</option>
-</select>
+<div class="wrap-collabsible">
+    <input id="collapsible" class="toggle" type="checkbox">
+    <label for="collapsible" class="lbl-toggle" style="display: none;"></label>
+    <div class="collapsible-content">
+      <div class="content-inner">
+        <p>
+          QUnit is by calling one of the object that are embedded in JavaScript, and faster JavaScript program could also used with
+          its elegant, well documented, and functional programming using JS, HTML pages Modernizr is a popular browsers without
+          plug-ins. Test-Driven Development.
+        </p>
+      </div>
+    </div>
 </div>
 
 
-<div class="imgbox">
+<div id="imgbox">
     <!-- <img class="center-fit" id="preview" src="floor1.png"> -->
     <canvas id="myCanvas"></canvas>
-    <img id="SecondFloor" src="floor2.png" style="display:none">
+    <img id="SecondFloor" src="floor1.png" style="display:none;">
 
         <script src="LineBuilder.js"></script>
         <script src ="floor3Data.js"></script>
         <script src ="floor2Data.js"></script>
+        <script src ="floor1Data.js"></script>
         <script src="FileReading.js"></script>
         <script src="Vector.js"></script>
         <script src="Relatives.js"></script>
@@ -45,8 +265,90 @@
         <script src="AstarAlgorithm.js"></script>
         <script src="DrawingController.js"></script>
         <script src="InputHandling.js"></script>
+        <script src="resetPath.js"></script>
+
+        <script src="numpad.js"></script>
 </div>
 
+</div>
+
+<script>
+var theToggle = document.getElementById('toggle');
+
+// based on Todd Motto functions
+// https://toddmotto.com/labs/reusable-js/
+
+// hasClass
+function hasClass(elem, className) {
+	return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+}
+// addClass
+function addClass(elem, className) {
+    if (!hasClass(elem, className)) {
+    	elem.className += ' ' + className;
+    }
+}
+// removeClass
+function removeClass(elem, className) {
+	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+	if (hasClass(elem, className)) {
+        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+            newClass = newClass.replace(' ' + className + ' ', ' ');
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    }
+}
+// toggleClass
+function toggleClass(elem, className) {
+	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
+    if (hasClass(elem, className)) {
+        while (newClass.indexOf(" " + className + " ") >= 0 ) {
+            newClass = newClass.replace( " " + className + " " , " " );
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    } else {
+        elem.className += ' ' + className;
+    }
+}
+
+theToggle.onclick = function() {
+   toggleClass(this, 'on');
+   return false;
+}
+window.addEventListener("load", function(){
+        // Bare minimum - provide the ID
+        numpad.attach({
+          id : "demo-numpad-1"
+        });
+        // The options
+        numpad.attach({
+          id : "demo-numpad-2",
+          // The target field will be set to "readonly" by default
+          // This is to prevent the default onscreen keyboard from showing up on mobiles
+          // Use this with extra care
+          readonly : false, 
+          // Allow decimal points? True by default
+          decimal : false,
+          // Maximum allowed characters, 16 by default
+          // Feel free to modify the script to set a maximum allowed number instead
+          max : 5
+        });
+      });
+
+let myLabels = document.querySelectorAll('.lbl-toggle');
+
+Array.from(myLabels).forEach(label => {
+  label.addEventListener('keydown', e => {
+    // 32 === spacebar
+    // 13 === enter
+    if (e.which === 32 || e.which === 13) {
+      e.preventDefault();
+      label.click();
+    };
+  });
+});
+
+</script>
 
 </body>
 </html>

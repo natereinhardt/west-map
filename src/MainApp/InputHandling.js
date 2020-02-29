@@ -2,8 +2,9 @@ let startPassed = false; // whether the first click has been made in setting the
 let endPassed = false; // whether the second click has been made in settings the flags
 
 c.onclick = function() { // click event
-    let mouseX = event.clientX - 7; // records x value of mouse
-    let mouseY = event.clientY - 25; // records y value of mouse]
+    let canvasRect = document.getElementById("myCanvas").getBoundingClientRect();
+    let mouseX = event.clientX - canvasRect.left; // records x value of mouse
+    let mouseY = event.clientY - canvasRect.top; // records y value of mouse]
     let scrollX = window.scrollX; // how far to the right the user has scrolled, so the clicks map to the canvas accurately
     let scrollY = window.scrollY; // how for down the user has scrolled
     if(!startPassed) { // checks whether the first click has been made
