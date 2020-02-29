@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300"
+   height="300"
+   viewBox="0 0 79.374998 79.375002"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="nurse.svg"
+   inkscape:export-filename="C:\Users\16363\Desktop\WWT\icons\nurse.png"
+   inkscape:export-xdpi="115.2"
+   inkscape:export-ydpi="115.2">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="618.21605"
+     inkscape:cy="477.18553"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1672"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-217.62498)">
+    <path
+       style="opacity:1;vector-effect:none;fill:#ff0069;fill-opacity:1;stroke-width:0.13554159;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 23.42251,222.50172 c -12.191116,-2e-5 -22.073974,9.88284 -22.0739535,22.07396 0.1622257,4.76269 1.8761925,9.3071 4.5676459,13.67196 H 18.239038 l 7.263917,-12.58102 9.440261,16.35209 2.657355,-4.60259 h 36.585175 c 2.366026,-4.14215 3.805869,-8.41927 3.8407,-12.84044 2e-5,-12.19112 -9.88284,-22.07398 -22.073955,-22.07396 -6.188693,0.0101 -12.088919,2.61764 -16.262608,7.18714 -4.174804,-4.57072 -10.077021,-7.1784 -16.267373,-7.18714 z m 2.080445,35.83407 -3.605883,6.2463 H 10.546323 c 8.314345,9.91244 20.528301,18.92589 29.14356,27.54115 9.211018,-8.68991 21.920509,-18.10033 30.134443,-28.37267 H 41.257812 l -6.314596,10.93704 z"
+       id="path815"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccccccccc" />
+  </g>
+</svg>

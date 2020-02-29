@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300"
+   height="300"
+   viewBox="0 0 79.374998 79.375002"
+   version="1.1"
+   id="svg2248"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="roomNum.svg"
+   inkscape:export-filename="C:\Users\16363\Desktop\WWT\icons\roomNum.png"
+   inkscape:export-xdpi="115.2"
+   inkscape:export-ydpi="115.2">
+  <defs
+     id="defs2242" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="95.766233"
+     inkscape:cy="222.84271"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1672"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata2245">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-217.62498)">
+    <g
+       id="g2878">
+      <path
+         style="opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:4.10073853;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 26.12674,218.38101 c -3.379001,0 -6.099787,2.72008 -6.099787,6.09907 v 13.17186 H 6.8551032 c -3.3790012,0 -6.09907792,2.72006 -6.09907792,6.09907 0,3.37901 2.72007672,6.09979 6.09907792,6.09979 H 20.026953 v 14.92336 H 6.8551032 c -3.3790012,0 -6.09907792,2.72078 -6.09907792,6.09979 0,3.37899 2.72007672,6.09907 6.09907792,6.09907 H 20.026953 v 13.17186 c 0,3.37899 2.720786,6.09907 6.099787,6.09907 3.379001,0 6.099076,-2.72008 6.099076,-6.09907 V 276.97302 H 47.14918 v 13.17186 c 0,3.37899 2.720788,6.09907 6.099788,6.09907 3.379002,0 6.099078,-2.72008 6.099078,-6.09907 v -13.17186 h 13.171849 c 3.379003,0 6.09908,-2.72008 6.09908,-6.09907 0,-3.37901 -2.720077,-6.09979 -6.09908,-6.09979 H 59.348046 V 249.8508 h 13.171849 c 3.379003,0 6.09908,-2.72078 6.09908,-6.09979 0,-3.37901 -2.720077,-6.09907 -6.09908,-6.09907 H 59.348046 v -13.17186 c 0,-3.37899 -2.720076,-6.09907 -6.099078,-6.09907 -3.379,0 -6.099788,2.72008 -6.099788,6.09907 v 13.17186 H 32.225816 v -13.17186 c 0,-3.37899 -2.720075,-6.09907 -6.099076,-6.09907 z m 6.099076,31.46979 H 47.14918 v 14.92336 H 32.225816 Z"
+         id="rect2801"
+         inkscape:connector-curvature="0" />
+    </g>
+    <g
+       transform="rotate(90,35.293527,257.31248)"
+       id="g2878-2" />
+  </g>
+</svg>

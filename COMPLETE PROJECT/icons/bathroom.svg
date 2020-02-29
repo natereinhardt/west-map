@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="300"
+   height="300"
+   viewBox="0 0 79.374998 79.375002"
+   version="1.1"
+   id="svg1397"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="bathroom.svg"
+   inkscape:export-filename="C:\Users\16363\Desktop\WWT\icons\bathroom.png"
+   inkscape:export-xdpi="115.2"
+   inkscape:export-ydpi="115.2">
+  <defs
+     id="defs1391" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="-8.8554891"
+     inkscape:cy="129.79802"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1672"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata1394">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-217.62498)">
+    <g
+       id="g1998"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(0.85264305,0,0,0.85264305,-63.280598,159.16831)">
+      <path
+         sodipodi:nodetypes="ccccccccccccccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="path1942"
+         transform="scale(0.26458333)"
+         d="m 349.12695,288.32227 v 0 c -31.20034,0.95378 -56.24902,51.7893 -56.26953,114.19726 1.5e-4,63.11783 25.58367,114.28486 57.14258,114.28516 31.31409,-0.0203 56.78701,-50.44179 57.12109,-113.06641 v 173.42383 l 26.60938,-28.52734 26.60937,28.61718 26.61133,-28.52734 26.60938,28.61719 26.60937,-28.52735 26.60938,28.61524 L 593.39062,548.9043 620,577.51953 v -175 -5.71484 0 C 618.43726,337.91994 594.62718,290.8734 565.16797,288.46484 v 0 z M 350,368.50977 c 9.39179,-4.7e-4 17.00555,15.22618 17.00586,34.00976 2.3e-4,18.78435 -7.61369,34.01219 -17.00586,34.01172 -9.39217,4.7e-4 -17.00609,-15.22737 -17.00586,-34.01172 3.1e-4,-18.78358 7.61407,-34.01023 17.00586,-34.00976 z"
+         style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:14.74015808;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="csc"
+         inkscape:connector-curvature="0"
+         id="path1942-2"
+         d="m 107.71745,106.9051 c 0,-8.11791 -1.57386,-16.281933 -4.47075,-21.968102 -2.89689,-5.686168 -6.815288,-8.803916 -10.873529,-8.651732"
+         style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.9000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+  </g>
+</svg>
