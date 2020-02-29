@@ -1,0 +1,10 @@
+ID 10-1342 -> Rooms
+ID 1343 -> Restroom
+ID 1344 -> Fountain
+ID 1345 -> Vending Machines
+ID 1346 -> Bottle Filler
+ID 1347 -> Main Office
+ID 1348 -> Nurse's Office
+ID 1349 -> Guidance Office
+ID 1350 -> Attendance Office
+ID 1351 -> Principal's Office
